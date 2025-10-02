@@ -51,14 +51,14 @@ add_custom_target(
 
 add_custom_command(
     OUTPUT  "${full-controls-docs}"
-    COMMAND "qdoc" "-indexdir" "/usr/share/doc/qt5" "-outputdir" "${doc-dir}" "${CMAKE_CURRENT_SOURCE_DIR}/doc/asteroid_controls.qdocconf" 
+    COMMAND "qdoc" "-indexdir" "/usr/share/doc/qt6" "-outputdir" "${doc-dir}" "${CMAKE_CURRENT_SOURCE_DIR}/doc/asteroid_controls.qdocconf"
     COMMENT "Generating HTML format Reference documentation..." VERBATIM
 )
 
 target_link_libraries(asteroidcontrolsplugin
-	Qt5::Qml
-	Qt5::Quick
-	Qt5::Svg)
+	Qt6::Qml
+	Qt6::Quick
+	Qt6::Svg)
 
 install(TARGETS asteroidcontrolsplugin
 	DESTINATION ${INSTALL_QML_IMPORT_DIR}/org/asteroid/controls)

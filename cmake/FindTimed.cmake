@@ -1,14 +1,14 @@
-# Try to find timed-qt5
+# Try to find timed-qt6
 # Once done this will define
 # TIMED_FOUND - System has timed
 # TIMED_INCLUDE_DIRS - The timed include directories
 # TIMED_LIBRARIES - The libraries needed to use timed
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(PC_Timed QUIET timed-qt5)
+pkg_check_modules(PC_Timed QUIET timed-qt6)
 
 find_library(Timed_LIBRARIES
-	NAMES timed-qt5
+	NAMES timed-qt6
 	PATHS ${PC_Timed_LIBDIR} ${PC_Timed_LIBRARY_DIRS})
 
 set(Timed_VERSION ${PC_Timed_VERSION})

@@ -6,7 +6,7 @@
 # QTMPRIS_DEFINITIONS - Compiler switches required for using mpris
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(PC_QtMpris QUIET mpris-qt5)
+pkg_check_modules(PC_QtMpris QUIET mpris-qt6)
 set(QtMpris_DEFINITIONS ${PC_QtMpris_CFLAGS_OTHER})
 
 find_path(QtMpris_INCLUDE_DIRS
@@ -15,7 +15,7 @@ find_path(QtMpris_INCLUDE_DIRS
 	PATHS ${PC_QtMpris_INCLUDEDIR} ${PC_QtMpris_INCLUDE_DIRS})
 
 find_library(QtMpris_LIBRARIES
-	NAMES mpris-qt5
+	NAMES mpris-qt6
 	PATHS ${PC_QtMpris_LIBDIR} ${PC_QtMpris_LIBRARY_DIRS})
 
 set(QtMpris_VERSION ${PC_QtMpris_VERSION})
